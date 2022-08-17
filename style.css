@@ -1,0 +1,37 @@
+h1 {
+    color:blue;
+    background-color: yellow;
+    text-align: center;
+}
+
+h2 {
+    color:blue;
+    background-color: yellow;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+body {
+    background-color: green;
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    display:inline-block;
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+    margin: auto;
+}
+
+.cardimage {
+    display:inline-block;
+    height: 80%;
+    width: 80%;
+    background-color: whitesmoke;
+    margin: auto;
+}
