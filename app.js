@@ -90,20 +90,24 @@ if (userNumberGuess === myFavoriteNumber) {
 }
 let numberOfGuesses = 6;
 let myFavoriteMusic = ['Outkast', 'Frank Ocean', 'The Weeknd', 'Lil Wayne', 'Young Thug', 'Jay-Z', 'Bob Marley'];
-let userMusicianGuess = parseInt(prompt('What is one of my favorite Musicians?'));
-while(userMusicianGuess !== myFavoriteMusic && numberOfGuesses > 1) {
-  if (userMusicianGuess !== myFavoriteMusic) {
+let userMusicianGuess = prompt('What is one of my favorite Musicians?');
+let isFavorite = false;
+while(numberOfGuesses > 0) {
+   // iterate myFavoriteMusic to see if userMusicianGuess is inside, if it is set is favorite to true
+  if (isFavorite === false) {
     alert('That is wrong! Think Rap or R&B Music...');
   } else {
     alert('Still incorrect! Try again. Think about Southern Rap...');
   }
-  numberOfGuesses -= 1;
-  userMusicianGuess = parseInt(prompt('What is one of my favorite Musicians?'));
-
-  if (userMusicianGuess === myFavoriteMusic) {
+  if (isFavorite === true) {
     alert('Correct! Great job! My Favorite Musicians are ' + myFavoriteMusic + '. You got a total of ' + correctAnswers + ' points.');
     correctAnswers++;
-  } else {
+    break;
+  } 
+  numberOfGuesses -= 1;
+  if(numberOfGuesses === 0) {
     alert('You ran out of attempts, sorry! The correct answer is one of the following: ' + myFavoriteMusic + '! You got a total of ' + correctAnswers + ' points.');
   }
+  userMusicianGuess = prompt('What is one of my favorite Musicians?');
+
 }
