@@ -103,12 +103,8 @@ while(numberOfGuesses > 0) {
   if (isFavorite === false) {
     alert('That is wrong! Think Rap or R&B Music...');
   } 
-  
-  //   else {
-  //     alert('Still incorrect! Try again. Think about Southern Rap...');
-  //   }
   if (isFavorite === true) {
-    alert('Correct! Great job! My Favorite Musicians are ' + myFavoriteMusic + '. You got a total of ' + correctAnswers + ' points.');
+    alert('Correct! Great job! My Favorite Musicians are ' + myFavoriteMusic + '.');
     correctAnswers++;
     break;
   } 
