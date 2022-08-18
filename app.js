@@ -93,12 +93,20 @@ let myFavoriteMusic = ['Outkast', 'Frank Ocean', 'The Weeknd', 'Lil Wayne', 'You
 let userMusicianGuess = prompt('What is one of my favorite Musicians?');
 let isFavorite = false;
 while(numberOfGuesses > 0) {
-   // iterate myFavoriteMusic to see if userMusicianGuess is inside, if it is set is favorite to true
+  // iterate myFavoriteMusic to see if userMusicianGuess is inside, if it is set is favorite to true
+  for (let music of myFavoriteMusic) {
+    console.log(music);
+    if (userMusicianGuess.toLowerCase() === music.toLowerCase()) {
+      isFavorite = true;
+    }
+  }
   if (isFavorite === false) {
     alert('That is wrong! Think Rap or R&B Music...');
-  } else {
-    alert('Still incorrect! Try again. Think about Southern Rap...');
-  }
+  } 
+  
+  //   else {
+  //     alert('Still incorrect! Try again. Think about Southern Rap...');
+  //   }
   if (isFavorite === true) {
     alert('Correct! Great job! My Favorite Musicians are ' + myFavoriteMusic + '. You got a total of ' + correctAnswers + ' points.');
     correctAnswers++;
@@ -111,3 +119,4 @@ while(numberOfGuesses > 0) {
   userMusicianGuess = prompt('What is one of my favorite Musicians?');
 
 }
+alert('You are done with the guessing game! You have answered ' + correctAnswers + ' questions correctly. Great job!');
