@@ -1,2 +1,3 @@
 # Guessing-Game
-Guessing Game for Code 201
+
+Coding project for a class.
